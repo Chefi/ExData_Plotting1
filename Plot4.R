@@ -26,14 +26,14 @@ plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v5, type="l")
 
 
 par(mfrow = c(2,2))
-plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), as.numeric(data[,3]), type="l",  ylab = "Global Active Power", xlab="", cex.lab=0.7, cex.axis=0.7)
-plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v5, type="l",ylab = "Voltage", xlab="datetime", cex.lab=0.7, cex.axis=0.7)
+plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), as.numeric(data[,3]), type="l",  ylab = "Global Active Power", xlab="", cex.lab=0.9, cex.axis=0.9)
+plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v5, type="l",ylab = "Voltage", xlab="datetime", cex.lab=0.9, cex.axis=0.9)
 
-plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v7, type="l", ylab = "Energy sub metering", xlab="", cex.lab=0.7, cex.axis=0.7)
+plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v7, type="l", ylab = "Energy sub metering", xlab="", cex.lab=0.9, cex.axis=0.9)
 points(strptime(v3,"%d/%m/%Y %H:%M:%S"), v8, type="l", col = "red")
 points(strptime(v3,"%d/%m/%Y %H:%M:%S"), v9, type="l", col = "blue")
-legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),col=c("black", "red", "blue"), lty=c(1,1,1), cex = 0.5)
-plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v4, type="l", ylab = "Global Reactive Power", xlab="datetime", cex.lab=0.7, cex.axis=0.7)
+legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),col=c("black", "red", "blue"), lty=c(1,1,1), cex = 0.9)
+plot(strptime(v3,"%d/%m/%Y %H:%M:%S"), v4, type="l", ylab = "Global Reactive Power", xlab="datetime", cex.lab=0.9, cex.axis=0.9)
 
 dev.copy(png, file = "plot4.png", width=480, height=480)
 dev.off()
